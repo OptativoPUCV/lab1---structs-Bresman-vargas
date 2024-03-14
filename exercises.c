@@ -15,8 +15,7 @@ int findMax(int arr[], int size) {
     if(arr[i] > mayor){
       mayor = arr[i];
     }
-  }
-  
+  } 
   return mayor; 
 }
 
@@ -26,6 +25,12 @@ Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {
+  int temp;
+  for(int i = size; i > 0; i--){
+    temp = arr[i];
+    arr[i] = arr[size - i];
+    arr[size - i] = temp;
+  }
 }
 
 /*
