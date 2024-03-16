@@ -25,8 +25,8 @@ Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) {
-  int temporal;
-  for(int i = 0 ; i < size/2 ; i++){
+  int temporal; //Necesitamos un temporal
+  for(int i = 0 ; i < size/2 ; i++){  //En el mismo paso intercambiamos estremos, hasta la mitad
     temporal = arr[i];
     arr[i] = arr[size - 1 - i];
     arr[size - 1 - i] = temporal;
@@ -42,16 +42,16 @@ newsize apunta a una dirección válida que no ha sido inicializada con nigún v
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int *newArr = (int *)malloc(size * sizeof(int));
-  int count = 0;
-  for(int i = 0; i < size; i++){
+  int *newArr = (int*) malloc(sizeof(int) * size);
+  int contador = 0;
+  for(int i = 0 ; i < size ; i++){
     if(arr[i] % 2 == 0){
-      newArr[count] = arr[i];
-      count++;
+      newArr[contador] = arr[i];
+      contador ++;
     }
   }
-  *newSize = count;
-  return newArr; 
+  *newSize = contador;
+  return newArr;
 }
 
 /*
