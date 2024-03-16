@@ -217,3 +217,31 @@ exercises.c:131:3: error: format not a string literal and no format arguments [-
 cc1: all warnings being treated as errors
 Compilation failed
 71067c4
+Sat 16 Mar 2024 05:25:52 PM UTC: 
+ exercises.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:132:8: error: ‘libro’ is a pointer; did you mean to use ‘->’?
+  132 |   libro.autor.anioNacimiento = anioNacimiento;
+      |        ^
+      |        ->
+exercises.c:133:8: error: ‘libro’ is a pointer; did you mean to use ‘->’?
+  133 |   libro.anioPublicacion = anioPublicacion;
+      |        ^
+      |        ->
+exercises.c:135:3: error: implicit declaration of function ‘strcopy’; did you mean ‘strcpy’? [-Werror=implicit-function-declaration]
+  135 |   strcopy(libro.titulo, titulo);
+      |   ^~~~~~~
+      |   strcpy
+exercises.c:135:16: error: ‘libro’ is a pointer; did you mean to use ‘->’?
+  135 |   strcopy(libro.titulo, titulo);
+      |                ^
+      |                ->
+exercises.c:136:16: error: ‘libro’ is a pointer; did you mean to use ‘->’?
+  136 |   strcopy(libro.autor.nombre, nombreAutor);
+      |                ^
+      |                ->
+cc1: all warnings being treated as errors
+Compilation failed
+e205558

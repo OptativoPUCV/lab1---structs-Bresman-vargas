@@ -127,8 +127,13 @@ typedef struct {
 
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
-//Hola
-  printf(libro);
+
+//Datos numericos
+  libro.autor.anioNacimiento = anioNacimiento;
+  libro.anioPublicacion = anioPublicacion;
+//Punteros a vectores de texto
+  strcopy(libro.titulo, titulo);
+  strcopy(libro.autor.nombre, nombreAutor);
 }
 
 /*
