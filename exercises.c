@@ -150,7 +150,7 @@ Puedes guiarte con lo que vimos en las clases (diapos).
 
 typedef struct nodo {
   int numero;
-  struct nodo siguiente; // puntero al siguiente nodo
+  struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) { 

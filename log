@@ -289,3 +289,9 @@ exercises.c:153:15: error: field ‘siguiente’ has incomplete type
       |               ^~~~~~~~~
 Compilation failed
 ec28ed2
+Sat 16 Mar 2024 06:16:53 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+total_score: 70/70
+a22fef7
