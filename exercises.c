@@ -42,7 +42,7 @@ newsize apunta a una dirección válida que no ha sido inicializada con nigún v
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int *newArr = (int*) malloc(sizeof(int) * size);
+  int *newArr = (int*) malloc(sizeof(int) * size); 
   int contador = 0;
   for(int i = 0 ; i < size ; i++){
     if(arr[i] % 2 == 0){
@@ -50,7 +50,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize) {
       contador ++;
     }
   }
-  *newSize = contador;
+  *newSize = contador; //Como se solicita
   return newArr;
 }
 
@@ -62,22 +62,23 @@ arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
                        int result[]) {
-  for(int i = 0; i < size1; i++){
-    result[i] = arr1[i]; 
-  };
-  for(int i = 0; i < size2; i++){
+  // Poner los datos del arr1 y arr2 en el result, los recorremos
+  for(int i = 0 ; i < size1 ; i++){
+    result[i] = arr1[i];
+  }
+  for(int i = 0 ; i < size2 ; i++){
     result[size1 + i] = arr2[i];
-  };
-  for(int i = 0; i < size1 + size2; i++){
-    for(int j = i + 1; j < size1 + size2; j++){
-      if(result[i] > result[j]){
-        int temp = result[i];
-        result[i] = result[j];
+  }
+  //bubble sort
+  for(int i = 0 ; i < (size1 + size2) - 1 ; i++){
+    for(int j = 0 ; j < (size1 + size2) - 1 - i ; j++){
+      if(result[j] > result[j+1]){
+        int temp = result[j+1];
+        result[j+1] = result[j];
         result[j] = temp;
       }
     }
   }
-  
 }
 
 /*
