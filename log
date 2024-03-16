@@ -280,3 +280,12 @@ Sat 16 Mar 2024 05:37:27 PM UTC:
  tests:  0|0
 total_score: 70/70
 c6c8166
+Sat 16 Mar 2024 06:16:46 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c:153:15: error: field ‘siguiente’ has incomplete type
+  153 |   struct nodo siguiente; // puntero al siguiente nodo
+      |               ^~~~~~~~~
+Compilation failed
+ec28ed2

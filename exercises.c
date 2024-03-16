@@ -115,7 +115,7 @@ inicializar la información de un libro.
 */
 
 typedef struct {
-  char nombre[50];
+  char nombre [50];
   int anioNacimiento;
 } Autor;
 
@@ -150,7 +150,7 @@ Puedes guiarte con lo que vimos en las clases (diapos).
 
 typedef struct nodo {
   int numero;
-  struct nodo *siguiente; // puntero al siguiente nodo
+  struct nodo siguiente; // puntero al siguiente nodo
 } Nodo;
 
 Nodo *crearListaEnlazada(int arr[], int size) { 
