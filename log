@@ -257,3 +257,9 @@ exercises.c:135:3: error: implicit declaration of function ‘strcopy’; did yo
 cc1: all warnings being treated as errors
 Compilation failed
 52b50c9
+Sat 16 Mar 2024 05:27:59 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|1
+total_score: 60/70
+f9492d8
