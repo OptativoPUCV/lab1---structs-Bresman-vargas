@@ -10,13 +10,13 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) { 
-  int mayor = arr[0];
-  for(int i = 1; i < size; i++){
-    if(arr[i] > mayor){
-      mayor = arr[i];
+  int mayorValor = arr[0];
+  for(int i = 1; i < size ; i++){
+    if(arr[i] > mayorValor){
+      mayorValor = arr[i];
     }
-  } 
-  return mayor; 
+  }
+  return mayorValor;
 }
 
 /*
@@ -69,7 +69,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
     result[size1 + i] = arr2[i];
   };
   for(int i = 0; i < size1 + size2; i++){
-    for(int j = j = i + 1; j < size1 + size2; j++){
+    for(int j = i + 1; j < size1 + size2; j++){
       if(result[i] > result[j]){
         int temp = result[i];
         result[i] = result[j];
@@ -86,7 +86,16 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size) { 
+  for(int i = 0; i < size - 1; i++){
+    if(arr[i] > arr[i+1]){
+      return 0;
+    } 
+    
+    
+  }
+  return -2; 
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
