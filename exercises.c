@@ -128,7 +128,7 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) {
 //Hola
-  printf(*libro);
+  printf(libro);
 }
 
 /*
